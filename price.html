@@ -23,6 +23,52 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+   <!--Data Layer to enable rich data collection and targeting-->
+   <script>
+    var digitalData = {
+      page: {
+        pageInfo: {
+          pageName: "Home Page",
+        },
+      },
+      profile: {
+        memberType: "silver",
+      },
+      type:{
+        singleUser:false
+      }
+    };
+  </script>
+  <!--/Data Layer-->
+  <!--prehiding snippet for Adobe Target with asynchronous tags deployment-->
+  <script>
+    (function (g, b, d, f) {
+      (function (a, c, d) {
+        if (a) {
+          var e = b.createElement("style");
+          e.id = c;
+          e.innerHTML = d;
+          a.appendChild(e);
+        }
+      })(b.getElementsByTagName("head")[0], "at-body-style", d);
+      setTimeout(function () {
+        var a = b.getElementsByTagName("head")[0];
+        if (a) {
+          var c = b.getElementById("at-body-style");
+          c && a.removeChild(c);
+        }
+      }, f);
+    })(window, document, "body {opacity: 0 !important}", 3e3);
+  </script>
+  <script>
+    window.targetGlobalSettings = {
+      cookieDomain: "heartfelt-praline-c8cd0d.netlify.app",
+    };
+  </script>
+  <!--/prehiding snippet for Adobe Target with asynchronous tags deployment-->
+  <!--Tags Header Embed Code: REPLACE LINE 39 WITH THE EMBED CODE FROM YOUR OWN DEVELOPMENT ENVIRONMENT-->
+  <script src="https://assets.adobedtm.com/6268dc4b6b26/88aec16346ee/launch-7d00db0316ba-development.min.js" async></script>
+  <!--/Tags Header Embed Code-->
 </head>
 
 <body class="sub_page">
